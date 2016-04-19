@@ -1,0 +1,42 @@
+<div ng-controller="LoginController">
+	<div id="homedash">
+	<h1>Welcome {{user.name}}</h1>
+	<a class="createPoll" href="#/create">Create a New Poll</a> |
+	<a class="logout" href="" ng-click="logout()">Logout</a>
+
+
+
+	<h2>Current Polls</h2>
+
+	<form class="form-inline righty">
+		Filter: <input type="text" ng-model="filtering" placeholder="Search">
+	</form>
+	<br>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Survey Question</th>
+				<th>Date Posted</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="question in questions | filter: {'question':filtering}">
+				<td ng-bind="question._user.name"></td>
+				<td><a href="#/poll/{{question._id}}">{{question.question}}</a></td>
+				<td ng-bind="question.createdAt | date: 'MMM dd yyyy'"></td>
+				<td>
+
+					<a href="" ng-if="question._user._id == user._id" ng-click="delete_question(question)">Delete</a>
+
+
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	</div>
+</div>

@@ -1,0 +1,40 @@
+#container {
+	margin: 25px;
+}
+#mainlogin {
+	left: 25%;
+	top: 25%;
+	position: absolute;
+}
+
+#mainlogin button {
+	width: 250px;
+	float: right;
+}
+
+#createPoll form .question {
+	width: 500px;
+	margin: 5px;
+}
+
+#createPoll form .option {
+	margin: 5px;
+}
+
+#homedash h1 {
+	display: inline-block;
+	margin-right: 50%;
+}
+
+#homedash .createPoll {
+	margin-right: 10px;
+}
+
+#homedash .logout {
+	margin-left: 10px;
+}
+
+#createPoll h1 {
+	display: inline-block;
+	margin-right: 25%;
+}

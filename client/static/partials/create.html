@@ -1,0 +1,23 @@
+<div ng-controller = "QuestionController">
+	<div id="createPoll">
+		
+	<h1>Put the Question and Options here:</h1>
+	<a href="#/dashboard">Cancel</a>
+
+	
+	<form>
+		<input class="question" type="text" ng-model="new_question.question" placeholder="Question">
+		<br>
+		<input class="option" type="text" ng-model="new_question.option1" placeholder="Option1">
+		<br>
+		<input class="option" type="text" ng-model="new_question.option2" placeholder="Option2">
+		<br>
+		<input class="option" type="text" ng-model="new_question.option3" placeholder="Option3">
+		<br>
+		<input class="option" type="text" ng-model="new_question.option4" placeholder="Option4">
+		<br>
+		<button ng-click="createQuestion()">Create Poll</button>
+
+	</form>
+	</div>
+</div>
